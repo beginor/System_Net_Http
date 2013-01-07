@@ -1,25 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="3e75ac84-9d56-416a-87d7-45c05f6f5224" name="HttpMessageHandler" linkedPackageId="dad0e748-d5a7-41c2-a409-3e17cb8bdd48" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="ac3dbe02-c6d6-41ef-8631-a3ad36a8bc04">
-      <profileInstance Id="8fc1081d-6efc-42cc-b375-7338e8b37ed2" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="e1f1a5e4-22cb-4876-be19-9bf7fcd381a4">
-      <profileInstance Id="3de1584d-6b00-4cbe-a9e9-7ecb3a0219e7" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="1b9645da-1a07-42d9-b71d-b24f1ba2b8c0">
-      <profileInstance Id="597e73f2-ff05-4866-b4f0-cd059b5af8bc" name="CSharpProfile">
-        <elementDefinition Id="ab683e0a-d057-47a7-81ca-2aab4a59dd04" />
-      </profileInstance>
-      <elementDefinition Id="4ad6d237-c952-4df9-8df2-180f9b2f8ab2" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="97196664-7a2e-446b-be19-2dbff3fe3491" name="HttpMessageHandler" isAbstract="true" isLeaf="false" isActiveClass="false">
@@ -4441,5 +4421,25 @@
   </packagedElements>
   <package Id="dad0e748-d5a7-41c2-a409-3e17cb8bdd48" name="HttpClient">
     <elementDefinition Id="9cba3aaf-2b01-4719-9bdc-f89bff8fd1f2" />
+    <profileInstances>
+      <packageHasProfileInstances Id="ac3dbe02-c6d6-41ef-8631-a3ad36a8bc04">
+        <profileInstance Id="8fc1081d-6efc-42cc-b375-7338e8b37ed2" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="e1f1a5e4-22cb-4876-be19-9bf7fcd381a4">
+        <profileInstance Id="3de1584d-6b00-4cbe-a9e9-7ecb3a0219e7" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="1b9645da-1a07-42d9-b71d-b24f1ba2b8c0">
+        <profileInstance Id="597e73f2-ff05-4866-b4f0-cd059b5af8bc" name="CSharpProfile">
+          <elementDefinition Id="ab683e0a-d057-47a7-81ca-2aab4a59dd04" />
+        </profileInstance>
+        <elementDefinition Id="4ad6d237-c952-4df9-8df2-180f9b2f8ab2" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
