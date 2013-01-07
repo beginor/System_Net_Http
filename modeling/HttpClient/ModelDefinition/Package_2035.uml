@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="e6796949-1d68-4985-a754-957915405b27"
+  name="Cache"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="e2bff610-001a-4cbc-9c91-12f327bd91e2"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Net.Cache"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="b748958d-fe42-4a45-a4ca-12c0e29af484"
+        name="RequestCachePolicy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="cfdbcac1-e883-4f9f-9334-72ce4fc965da"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FGDEIC Project%2FThirdPart Resource%2Fmonotouch%2F2.1%2FSystem.dll&quot; Namespace%3DSystem.Net.Cache Type%3DRequestCachePolicy"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a0231447-e9f7-412b-a28b-08d8bbb0a244"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="54ca41cf-685d-49c5-a079-5850642a19ee">
+                <propertyInstance
+                  Id="6582e101-b8ba-41b2-a9ee-3e9b25dabb41"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="62bed0a6-b2a6-4823-aa1b-4ccd66d24b68">
+                <propertyInstance
+                  Id="3cab5143-bfd5-4188-8d37-804cb2cfc604"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2641ed4a-06b4-44bf-963c-314726ccb467">
+                <propertyInstance
+                  Id="84c4b1dc-a3f4-44c2-9bc8-b84d7dc8f0ca"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="52133957-a903-4ff5-86fe-c50cfe8d95be">
+                <propertyInstance
+                  Id="faca0c9e-c151-4e6d-a089-ba222f52c5c8"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c936796e-d450-4d81-a637-dcb12e82e345">
+                <propertyInstance
+                  Id="5e0d8b87-5d63-49a3-8bd0-bc04500aa711"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 11.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2013-01-07T20:35:14" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '029a70c2-f6a1-4978-9734-5bfabebd621d' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'c72e2a8e-4dae-40fd-b6fb-685e1b4c2626' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System' -  (Package)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net' -  (Package)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http' -  (Package)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::DelegatingHandler' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::HttpMessageHandler' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::HttpRequestMessage' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::HttpResponseMessage' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Medium" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::MessageProcessingHandler' -  (Class)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::MessageProcessingHandler::HandleCanceledOperations' -  (Operation)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::MessageProcessingHandler::HandleCanceledOperations::cancellationToken' -  (Parameter)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::MessageProcessingHandler::HandleCanceledOperations::e' -  (Parameter)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::MessageProcessingHandler::HandleCanceledOperations::tcs' -  (Parameter)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::MessageProcessingHandler::MessageProcessingHandler' -  (Operation)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::MessageProcessingHandler::MessageProcessingHandler::innerHandler' -  (Parameter)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::MessageProcessingHandler::ProcessRequest' -  (Operation)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::MessageProcessingHandler::ProcessRequest::cancellationToken' -  (Parameter)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::MessageProcessingHandler::ProcessRequest::request' -  (Parameter)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::MessageProcessingHandler::ProcessResponse' -  (Operation)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::MessageProcessingHandler::ProcessResponse::cancellationToken' -  (Parameter)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::MessageProcessingHandler::ProcessResponse::response' -  (Parameter)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::MessageProcessingHandler::SendAsync' -  (Operation)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::MessageProcessingHandler::SendAsync::cancellationToken' -  (Parameter)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Net::Http::MessageProcessingHandler::SendAsync::request' -  (Parameter)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::OperationCanceledException' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Threading' -  (Package)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Threading::CancellationToken' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Threading::Tasks' -  (Package)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Threading::Tasks::Task' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Threading::Tasks::Task&lt;HttpResponseMessage‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Threading::Tasks::TaskCompletionSource' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HttpClient::System::Threading::Tasks::TaskCompletionSource&lt;HttpResponseMessage‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: HttpClient::System::Net::Http::MessageProcessingHandler to HttpClient::System::Net::Http::DelegatingHandler (Generalization)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: HttpClient::System::Net::Http::HttpMessageHandler to HttpClient::System::Net::Http::Disposable (Generalization)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: HttpClient::System::Net::Http::DelegatingHandler to HttpClient::System::Net::Http::HttpMessageHandler (Generalization)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: HttpClient::System::Net::Http::HttpClientHandler to HttpClient::System::Net::Http::HttpMessageHandler (Generalization)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: HttpClient::System::Net::Http::HttpResponseMessage to HttpClient::System::Net::Http::Disposable (Generalization)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: HttpClient::System::Net::Http::HttpRequestMessage to HttpClient::System::Net::Http::Disposable (Generalization)" />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="High" Text="(1) type(s) fully reverse engineered." />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="High" Text="(10) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2013-01-07T20:35:15" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

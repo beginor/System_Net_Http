@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA394210-D44F-435B-9627-AC0C40F2FE41}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System.Net.Http</RootNamespace>
+    <AssemblyName>System.Net.Http</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\lib\Newtonsoft.Json\android\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\ios\System.Net.Http\ByteArrayContent.cs">
+      <Link>ByteArrayContent.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\DelegatingHandler.cs">
+      <Link>DelegatingHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\Disposable.cs">
+      <Link>Disposable.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\Formatting\HttpClientExtensions.cs">
+      <Link>Formatting\HttpClientExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\Formatting\HttpContentExtensions.cs">
+      <Link>Formatting\HttpContentExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\Formatting\JsonMediaTypeFormatter.cs">
+      <Link>Formatting\JsonMediaTypeFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\Formatting\MediaTypeFormatter.cs">
+      <Link>Formatting\MediaTypeFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\Formatting\ObjectContent.cs">
+      <Link>Formatting\ObjectContent.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\Formatting\XmlMediaTypeFormatter.cs">
+      <Link>Formatting\XmlMediaTypeFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\FormUrlEncodedContent.cs">
+      <Link>FormUrlEncodedContent.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\Headers\HttpContentHeaders.cs">
+      <Link>Headers\HttpContentHeaders.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\Headers\HttpHeaders.cs">
+      <Link>Headers\HttpHeaders.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\Headers\HttpRequestHeaders.cs">
+      <Link>Headers\HttpRequestHeaders.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\Headers\HttpResponseHeaders.cs">
+      <Link>Headers\HttpResponseHeaders.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\HttpClient.cs">
+      <Link>HttpClient.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\HttpClientHandler.cs">
+      <Link>HttpClientHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\HttpContent.cs">
+      <Link>HttpContent.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\HttpKnownHeaderNames.cs">
+      <Link>HttpKnownHeaderNames.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\HttpMediaTypeNames.cs">
+      <Link>HttpMediaTypeNames.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\HttpMessageHandler.cs">
+      <Link>HttpMessageHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\HttpMessageInvoker.cs">
+      <Link>HttpMessageInvoker.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\HttpMethods.cs">
+      <Link>HttpMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\HttpRequestMessage.cs">
+      <Link>HttpRequestMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\HttpRequestState.cs">
+      <Link>HttpRequestState.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\HttpResponseMessage.cs">
+      <Link>HttpResponseMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\MessageProcessingHandler.cs">
+      <Link>MessageProcessingHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\StreamContent.cs">
+      <Link>StreamContent.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\StringContent.cs">
+      <Link>StringContent.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\StringExtensions.cs">
+      <Link>StringExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ios\System.Net.Http\UriExtensions.cs">
+      <Link>UriExtensions.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

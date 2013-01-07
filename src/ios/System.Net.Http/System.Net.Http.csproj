@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF703C08-D78C-400F-8ECF-30B6FBFF9B43}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System.Net.Http</RootNamespace>
+    <AssemblyName>System.Net.Http</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>false</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="monotouch">
+      <HintPath>D:\GDEIC Project\ThirdPart Resource\monotouch\2.1\monotouch.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>D:\GDEIC Project\ThirdPart Resource\monotouch\2.1\mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\lib\Newtonsoft.Json\ios\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>D:\GDEIC Project\ThirdPart Resource\monotouch\2.1\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>D:\GDEIC Project\ThirdPart Resource\monotouch\2.1\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>D:\GDEIC Project\ThirdPart Resource\monotouch\2.1\System.Xml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ByteArrayContent.cs" />
+    <Compile Include="DelegatingHandler.cs" />
+    <Compile Include="Disposable.cs" />
+    <Compile Include="Formatting\HttpClientExtensions.cs" />
+    <Compile Include="Formatting\HttpContentExtensions.cs" />
+    <Compile Include="Formatting\JsonMediaTypeFormatter.cs" />
+    <Compile Include="Formatting\MediaTypeFormatter.cs" />
+    <Compile Include="Formatting\ObjectContent.cs" />
+    <Compile Include="Formatting\XmlMediaTypeFormatter.cs" />
+    <Compile Include="FormUrlEncodedContent.cs" />
+    <Compile Include="Headers\HttpContentHeaders.cs" />
+    <Compile Include="Headers\HttpHeaders.cs" />
+    <Compile Include="Headers\HttpRequestHeaders.cs" />
+    <Compile Include="Headers\HttpResponseHeaders.cs" />
+    <Compile Include="HttpClient.cs" />
+    <Compile Include="HttpClientHandler.cs" />
+    <Compile Include="HttpContent.cs" />
+    <Compile Include="HttpKnownHeaderNames.cs" />
+    <Compile Include="HttpMediaTypeNames.cs" />
+    <Compile Include="HttpMessageHandler.cs" />
+    <Compile Include="HttpMessageInvoker.cs" />
+    <Compile Include="HttpMethods.cs" />
+    <Compile Include="HttpRequestMessage.cs" />
+    <Compile Include="HttpRequestState.cs" />
+    <Compile Include="HttpResponseMessage.cs" />
+    <Compile Include="MessageProcessingHandler.cs" />
+    <Compile Include="StreamContent.cs" />
+    <Compile Include="StringContent.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="UriExtensions.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
