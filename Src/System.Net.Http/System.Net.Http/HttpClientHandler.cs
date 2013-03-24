@@ -310,13 +310,18 @@ namespace System.Net.Http {
 		protected internal override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) {
 			this.sentRequest = true;
 			HttpWebRequest wrequest = this.CreateWebRequest(request);
-
 			if (request.Content != null) {
-				WebHeaderCollection headers = wrequest.Headers;
-				foreach (var header in request.Content.Headers) {
-					foreach (string value in header.Value) {
-						headers.AddValue(header.Key, value);
+				if (wrequest.CreatorInstance.GetType().Name == "ClientHttpWebRequest") {
+					WebHeaderCollection headers = wrequest.Headers;
+					foreach (var header in request.Content.Headers) {
+						foreach (string value in header.Value) {
+							headers.AddValue(header.Key, value);
+						}
 					}
+				}
+				else {
+					wrequest.ContentType = request.Content.Headers.ContentType.ToString();
+					wrequest.ContentLength = request.Content.Headers.ContentLength.GetValueOrDefault();
 				}
 
 #if !SILVERLIGHT
@@ -329,9 +334,36 @@ namespace System.Net.Http {
 			}
 
 			// FIXME: GetResponseAsync does not accept cancellationToken
-			var wresponse = await /*this.DoRequestAsync(wrequest)*/wrequest.GetResponseAsync().ConfigureAwait(false);
+			var wresponse = await this.DoRequestAsync(wrequest)/*wrequest.GetResponseAsync().ConfigureAwait(false)*/;
 
 			return this.CreateResponseMessage(wresponse as HttpWebResponse, request);
+		}
+
+		private Task<HttpWebResponse> DoRequestAsync(HttpWebRequest httpWebRequest) {
+			var tcs = new TaskCompletionSource<HttpWebResponse>();
+			try {
+				httpWebRequest.BeginGetResponse(ar => {
+					try {
+						if (ar.IsCompleted) {
+							var response = (HttpWebResponse)httpWebRequest.EndGetResponse(ar);
+							tcs.TrySetResult(response);
+						}
+					}
+					catch (WebException webEx) {
+						tcs.TrySetResult((HttpWebResponse)webEx.Response);
+					}
+					catch (Exception ex) {
+						tcs.TrySetException(ex);
+					}
+				}, null);
+			}
+			catch (WebException webEx) {
+				tcs.TrySetResult((HttpWebResponse)webEx.Response);
+			}
+			catch (Exception ex) {
+				tcs.TrySetException(ex);
+			}
+			return tcs.Task;
 		}
 	}
 }

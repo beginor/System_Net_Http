@@ -65,8 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestHandler.ashx.cs">
+      <DependentUpon>TestHandler.ashx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="TestHandler.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -87,9 +91,9 @@
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
-          <AutoAssignPort>False</AutoAssignPort>
+          <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>9407</DevelopmentServerPort>
-          <DevelopmentServerVPath>/HttpWebTest</DevelopmentServerVPath>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:9358/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
