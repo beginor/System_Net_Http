@@ -1,4 +1,4 @@
-System_Net_Http
+System.Net.Http for Silverlight
 ===============
 
-System.Net.Http for MonoDroid, MonoTouch and Silverlight.
+System.Net.Http for Silverlight, borrowed from Mono.
