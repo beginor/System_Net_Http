@@ -38,9 +38,11 @@ namespace HttpTestApp {
 			};
 			var param = new Dictionary<string, string> {
 				{"fName", "zhang"},
-				{"lName", "zhimin"}
+				{"lName", "zhimin"},
+				{"value", "zhang zhimin"}
 			};
-			httpClient.PostAsync("/TestHandler.ashx", new FormUrlEncodedContent(param)).ContinueWith(t => {
+			//var str = "hello,world";
+			httpClient.PostAsync("/testhandler.ashx", new FormUrlEncodedContent(param)).ContinueWith(t => {
 				this.EnqueueCallback(() => {
 					if (t.IsFaulted) {
 						Assert.Fail(t.Exception.GetBaseException().Message);

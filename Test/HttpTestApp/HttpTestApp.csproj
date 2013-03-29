@@ -101,6 +101,10 @@
       <Project>{7892f3a1-c00d-47fa-ae30-b6fe63613102}</Project>
       <Name>System.Net.Http</Name>
     </ProjectReference>
+    <ProjectReference Include="..\HttpTestLib\HttpTestLib.csproj">
+      <Project>{a8e32b53-985b-44f8-a41d-e4cac0d9b412}</Project>
+      <Name>HttpTestLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

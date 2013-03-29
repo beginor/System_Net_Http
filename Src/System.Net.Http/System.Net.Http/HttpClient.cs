@@ -254,7 +254,7 @@ namespace System.Net.Http {
 						throw new InvalidOperationException("Handler failed to return a value");
 					}
 
-					HttpResponseMessage response = await task/*.ConfigureAwait(false)*/;
+					HttpResponseMessage response = await task.ConfigureAwait(false);
 					if (response == null) {
 						throw new InvalidOperationException("Handler failed to return a response");
 					}

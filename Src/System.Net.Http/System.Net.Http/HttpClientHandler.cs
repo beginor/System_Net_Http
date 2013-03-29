@@ -311,17 +311,18 @@ namespace System.Net.Http {
 			this.sentRequest = true;
 			HttpWebRequest wrequest = this.CreateWebRequest(request);
 			if (request.Content != null) {
-				if (wrequest.CreatorInstance.GetType().Name == "ClientHttpWebRequest") {
+				wrequest.ContentType = request.Content.Headers.ContentType.ToString();
+				//wrequest.ContentLength = request.Content.Headers.ContentLength.GetValueOrDefault();
+				if (wrequest.GetType().Name == "ClientHttpWebRequest") {
 					WebHeaderCollection headers = wrequest.Headers;
 					foreach (var header in request.Content.Headers) {
-						foreach (string value in header.Value) {
-							headers.AddValue(header.Key, value);
+						if (header.Key != "Content-Type") {
+							headers[header.Key] = string.Join(", ", header.Value);
 						}
+						//foreach (string value in header.Value) {
+						//	headers.AddValue(header.Key, value);
+						//}
 					}
-				}
-				else {
-					wrequest.ContentType = request.Content.Headers.ContentType.ToString();
-					wrequest.ContentLength = request.Content.Headers.ContentLength.GetValueOrDefault();
 				}
 
 #if !SILVERLIGHT
@@ -331,6 +332,8 @@ namespace System.Net.Http {
 #endif
 
 				await request.Content.CopyToAsync(stream).ConfigureAwait(false);
+
+				stream.Close();
 			}
 
 			// FIXME: GetResponseAsync does not accept cancellationToken

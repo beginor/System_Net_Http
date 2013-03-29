@@ -22,6 +22,7 @@ namespace HttpTestApp {
 			//settings.TestServicePort = this.Host.Source.Port;
 			//UnitTestSystem.SetTestService(settings);
 			WebRequest.RegisterPrefix("http://agserver.gdepb.gov.cn", WebRequestCreator.BrowserHttp);
+			WebRequest.RegisterPrefix("http://localhost", WebRequestCreator.ClientHttp);
 			this.RootVisual = UnitTestSystem.CreateTestPage();
 		}
 
