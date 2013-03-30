@@ -9,7 +9,7 @@ namespace HttpTestWeb.Controllers {
 
 	public class BrowserHttpController : ApiController {
 
-		private static IList<TestEntity> _data = TestEntity.CreateSamples();
+		private static IList<TestEntity> _data = TestEntity.CreateSamples().ToList();
 
 		public IEnumerable<TestEntity> Get() {
 			return _data;

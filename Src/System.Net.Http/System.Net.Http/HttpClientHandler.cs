@@ -247,7 +247,7 @@ namespace System.Net.Http {
 			//wr.AutomaticDecompression = automaticDecompression;
 			//wr.PreAuthenticate = preAuthenticate;
 
-			if (useCookies && requestType.Equals("ClientHttpWebRequest")) {
+			if (useCookies && wr.SupportsCookieContainer) {
 				wr.CookieContainer = cookieContainer;
 			}
 
@@ -265,12 +265,19 @@ namespace System.Net.Http {
 			//}
 
 			// Add request headers
-			var headers = wr.Headers;
-			foreach (var header in request.Headers) {
-				foreach (var value in header.Value) {
-					headers.AddValue(header.Key, value);
+			wr.Accept = request.Headers.Accept.ToString();
+			//if (true || requestType.Equals("ClientHttpWebRequest")) {
+				var headers = wr.Headers;
+				foreach (var header in request.Headers) {
+					if (header.Key == "Accept") {
+						continue;
+					}
+					headers[header.Key] = string.Join(", ", header.Value);
+					//foreach (var value in header.Value) {
+					//	headers.AddValue(header.Key, value);
+					//}
 				}
-			}
+			//}
 
 			return wr;
 		}
@@ -310,11 +317,12 @@ namespace System.Net.Http {
 		protected internal override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) {
 			this.sentRequest = true;
 			HttpWebRequest wrequest = this.CreateWebRequest(request);
+			// if request has content, add content headers first
 			if (request.Content != null) {
 				wrequest.ContentType = request.Content.Headers.ContentType.ToString();
 				//wrequest.ContentLength = request.Content.Headers.ContentLength.GetValueOrDefault();
 				if (wrequest.GetType().Name == "ClientHttpWebRequest") {
-					WebHeaderCollection headers = wrequest.Headers;
+					var headers = wrequest.Headers;
 					foreach (var header in request.Content.Headers) {
 						if (header.Key != "Content-Type") {
 							headers[header.Key] = string.Join(", ", header.Value);
@@ -325,11 +333,7 @@ namespace System.Net.Http {
 					}
 				}
 
-#if !SILVERLIGHT
-				var stream = wrequest.GetRequestStream ();
-#else
-				var stream = await wrequest.GetRequestStreamAsync();
-#endif
+				var stream = await wrequest.GetRequestStreamAsync();/*wrequest.GetRequestStream ();*/
 
 				await request.Content.CopyToAsync(stream).ConfigureAwait(false);
 
@@ -337,7 +341,7 @@ namespace System.Net.Http {
 			}
 
 			// FIXME: GetResponseAsync does not accept cancellationToken
-			var wresponse = await this.DoRequestAsync(wrequest)/*wrequest.GetResponseAsync().ConfigureAwait(false)*/;
+			var wresponse = await /*this.DoRequestAsync(wrequest)*/wrequest.GetResponseAsync().ConfigureAwait(false);
 
 			return this.CreateResponseMessage(wresponse as HttpWebResponse, request);
 		}

@@ -21,8 +21,8 @@ namespace HttpTestApp {
 			//settings.StartRunImmediately = true;
 			//settings.TestServicePort = this.Host.Source.Port;
 			//UnitTestSystem.SetTestService(settings);
-			WebRequest.RegisterPrefix("http://agserver.gdepb.gov.cn", WebRequestCreator.BrowserHttp);
-			WebRequest.RegisterPrefix("http://localhost", WebRequestCreator.ClientHttp);
+			WebRequest.RegisterPrefix("http://localhost:8080/HttpTestWeb/api/browserhttp", WebRequestCreator.BrowserHttp);
+			WebRequest.RegisterPrefix("http://localhost:8080/HttpTestWeb/api/clienthttp", WebRequestCreator.ClientHttp);
 			this.RootVisual = UnitTestSystem.CreateTestPage();
 		}
 

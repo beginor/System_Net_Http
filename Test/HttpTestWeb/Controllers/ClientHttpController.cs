@@ -3,7 +3,7 @@ using System.Web.Http;
 
 namespace HttpTestWeb.Controllers {
 
-	public class DefaultController : ApiController {
+	public class ClientHttpController : ApiController {
 
 		// GET api/default
 		public IEnumerable<string> Get() {
