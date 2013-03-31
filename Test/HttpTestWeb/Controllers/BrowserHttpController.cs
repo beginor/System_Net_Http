@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Linq;
@@ -9,17 +10,18 @@ namespace HttpTestWeb.Controllers {
 
 	public class BrowserHttpController : ApiController {
 
-		private static IList<TestEntity> _data = TestEntity.CreateSamples().ToList();
+		protected static readonly IList<TestEntity> Data = TestEntity.CreateSamples().ToList();
 
 		public IEnumerable<TestEntity> Get() {
-			return _data;
+			return Data;
 		}
 
 		public int Post(TestEntity newEntity) {
-			var id = _data.Max(e => e.Id) + 1;
+			var id = Data.Max(e => e.Id) + 1;
 			newEntity.Id = id;
-			_data.Add(newEntity);
+			Data.Add(newEntity);
 			return id;
 		}
+
 	}
 }
