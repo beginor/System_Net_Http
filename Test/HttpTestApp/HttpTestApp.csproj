@@ -87,6 +87,7 @@
     </Compile>
     <Compile Include="BrowserHttpTest.cs" />
     <Compile Include="ClientHttpTest.cs" />
+    <Compile Include="MessageProcessingHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
