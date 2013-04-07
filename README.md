@@ -7,7 +7,16 @@ Silverlight 版本的 System.Net.Http ， 源自 Mono 的源代码。 使用方�
 对于 Silverlight 的 BrowserHttp ， 仅仅支持 GET 和 POST 方法， 示例代码如下：
 
 ```c#
-client = new HttpClient {
+var client = new HttpClient {
    BaseAddress = new Uri("http://localhost:8080/HttpTestWeb/api/")
 };
+
+// Get string from server
+client.GetStringAsync("browserhttp/").ContinueWith(t => {
+   if (t.IsFaulted) {
+      // report error here
+   } else {
+      var txt = t.Result;
+   }
+}, );
 ```
