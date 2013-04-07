@@ -70,3 +70,40 @@ client.DeleteAsync("clienthttp/1").ContinueWith(t => {
    }
 });
 ```
+
+支持职责链模式的 MessageProcessingHandler ， 如下面的代码所示：
+
+```c#
+public class CustomProcessingHandler : MessageProcessingHandler {
+
+   protected override HttpRequestMessage ProcessRequest(HttpRequestMessage request, CancellationToken cancellationToken) {
+      if (request.Method != HttpMethod.Get && request.Method != HttpMethod.Post) {
+         request.Headers.TryAddWithoutValidation("RequestMethod", request.Method.Method);
+         request.Method = HttpMethod.Post;
+      }
+      return request;
+   }
+
+   protected override HttpResponseMessage ProcessResponse(HttpResponseMessage response, CancellationToken cancellationToken) {
+      var request = response.RequestMessage;
+      if (request.Headers.Contains("RequestMethod")) {
+         IEnumerable<string> values;
+         if (request.Headers.TryGetValues("RequestMethod", out values)) {
+            request.Method = new HttpMethod(values.First());
+         }
+      }
+      return response;
+   }
+}
+```
+
+使用起来也是非常简单的：
+
+```c#
+var customHandler = new CustomProcessingHandler {
+	InnerHandler = new HttpClientHandler()
+};
+var client = new HttpClient(customHandler, true) {
+	BaseAddress = new Uri("http://localhost:8080/HttpTestWeb/api/")
+};
+```
