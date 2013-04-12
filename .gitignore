@@ -2,6 +2,9 @@
 *.DS_Store
 [Tt]humbs.db
 
+#Log Folder
+[Ll]og
+
 #Visual Studio Files
 [Oo]bj
 [Bb]in
